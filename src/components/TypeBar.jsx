@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { apiFetch } from "../utils/api-fetch"
 
-export default function Typebar() {
+export default function Typebar({ setType }) {
     const [types, setTypes] = useState([])
 
     useEffect(() => {
@@ -13,6 +13,10 @@ export default function Typebar() {
         setTypes(tiposAPI.results);
     }
 
+    const click = (tipoClicado) => {
+        setType(tipoClicado);
+    }
+
     return (
         <div style={{
             display: "flex"
@@ -20,11 +24,16 @@ export default function Typebar() {
             {
                 types.map((tipoCorrenteDoFor) => {
                     return (
-                        <div key={tipoCorrenteDoFor.name}>
+                        <div
+                            key={tipoCorrenteDoFor.name}>
                             <br />
-                            <label style={{
-                                marginRight: 5
-                            }}>{tipoCorrenteDoFor.name}</label>
+                            <button
+                                onClick={()=>click(tipoCorrenteDoFor.name)}
+                                style={{
+                                    marginRight: 5
+                                }}>
+                                {tipoCorrenteDoFor.name}
+                            </button>
                         </div>
                     )
                 })

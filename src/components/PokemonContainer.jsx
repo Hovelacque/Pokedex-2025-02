@@ -7,7 +7,7 @@ export default function PokemonContainer({ type }) {
 
     useEffect(() => {
         load()
-    }, [])
+    }, [type])
 
     const load = async () => {
         const retornoAPI = await apiFetch('/type/'+type);
@@ -17,9 +17,10 @@ export default function PokemonContainer({ type }) {
     return (
         <div>
             {
-                pokemons.map((pokemonCorrenteDoFor) => {
+                pokemons.map((pokemonCorrenteDoFor, index) => {
                     return (
                         <PokemonCard
+                            key={index}
                             pokemon={pokemonCorrenteDoFor.pokemon}
                         />
                     )

@@ -1,15 +1,20 @@
+import { useState } from 'react'
 import './App.css'
 import PokemonContainer from './components/PokemonContainer'
 import Typebar from './components/TypeBar'
 
 function App() {
+  const [type, setType] = useState('fire')
 
   return (
     <>
       <label>Pokedex</label>
-      <Typebar />
+      <Typebar 
+        setType={setType}
+      />
+      <h1>{type}</h1>
       <PokemonContainer 
-        type="fire"
+        type={type}
       />
     </>
   )
