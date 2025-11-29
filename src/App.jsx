@@ -1,4 +1,5 @@
 import './App.css'
+import PokemonContainer from './components/PokemonContainer'
 import Typebar from './components/TypeBar'
 
 function App() {
@@ -7,6 +8,9 @@ function App() {
     <>
       <label>Pokedex</label>
       <Typebar />
+      <PokemonContainer 
+        type="fire"
+      />
     </>
   )
 }

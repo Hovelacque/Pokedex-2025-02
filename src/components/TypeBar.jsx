@@ -14,13 +14,21 @@ export default function Typebar() {
     }
 
     return (
-        types.map((tipoCorrenteDoFor) => {
-            return (
-                <div key={tipoCorrenteDoFor.name}>
-                    <br />
-                    <label>{tipoCorrenteDoFor.name}</label>
-                </div>
-            )
-        })
+        <div style={{
+            display: "flex"
+        }}>
+            {
+                types.map((tipoCorrenteDoFor) => {
+                    return (
+                        <div key={tipoCorrenteDoFor.name}>
+                            <br />
+                            <label style={{
+                                marginRight: 5
+                            }}>{tipoCorrenteDoFor.name}</label>
+                        </div>
+                    )
+                })
+            }
+        </div>
     )
 }
