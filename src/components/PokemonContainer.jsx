@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { apiFetch } from "../utils/api-fetch"
+import {formatPokemonData} from "../utils/pokemon-helper";
 import PokemonCard from "./PokemonCard"
 
 export default function PokemonContainer({ type }) {
@@ -10,8 +11,16 @@ export default function PokemonContainer({ type }) {
     }, [type])
 
     const load = async () => {
-        const retornoAPI = await apiFetch('/type/'+type);
-        setPokemons(retornoAPI.pokemon);
+        const retornoAPI = await apiFetch('/type/' + type);
+        const novosPokemons = [];
+        for (let i = 0; i < retornoAPI.pokemon.length; i++) {
+            const { url } = retornoAPI.pokemon[i].pokemon;
+            const idPokemon = url.split('/')[6];
+            const dadosPokemon = await apiFetch('/pokemon/' + idPokemon);
+            const pokemon = formatPokemonData(dadosPokemon);
+            novosPokemons.push(pokemon);
+        }
+        setPokemons(novosPokemons);
     }
 
     return (
@@ -21,7 +30,7 @@ export default function PokemonContainer({ type }) {
                     return (
                         <PokemonCard
                             key={index}
-                            pokemon={pokemonCorrenteDoFor.pokemon}
+                            pokemon={pokemonCorrenteDoFor}
                         />
                     )
                 })
