@@ -1,6 +1,6 @@
 # Projeto final PUC 2025-02
 
-- Gabriel Reis[https://github.com/gabriellven222]
+- [Gabriel Reis](https://github.com/gabriellven222)
 - Rafael Siqueira[https://github.com/RafaelLeonardo999]
 - Yori[https://github.com/Yozamatzo]
 - Gustavo[https://github.com/GustavoNicoletti]
