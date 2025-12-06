@@ -1,8 +1,15 @@
-# React + Vite
+# Projeto final PUC 2025-02
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Gabriel Reis[https://github.com/gabriellven222]
+- Rafael Siqueira[https://github.com/RafaelLeonardo999]
+- Yori[https://github.com/Yozamatzo]
+- Gustavo[https://github.com/GustavoNicoletti]
+- Breno[https://github.com/Brenno77]
+- Rafael Figueiredo[https://github.com/RafaelFigueiredo22]
+    - ProjetoFinal[https://rafaelcesari0.github.io/Pokedex/]
+- Rafael Oliveira[https://github.com/RafaelCesari0]
+- Danilo[https://github.com/DAN1L00]
+- Mateus[https://github.com/Albee-spec]
+- Erick[https://github.com/Erickssfernandes]
+- Marcel[https://github.com/MclMarques]
+- Giovana[https://github.com/M4tins22]
